@@ -5,74 +5,51 @@ import type { CompatibilityItem } from "~/types";
 
 const frameworks: Array<CompatibilityItem> = [
   {
-    title: "React",
+    title: "EinsteinDB - Rust",
     icon: "frameworks/react",
-    url: "https://reactjs.org/",
+    url: "https://github.com/YosiSF/EinsteinDB",
   },
   {
-    title: "Preact",
+    title: "MilevaDB - Go",
     icon: "frameworks/preact",
-    url: "https://preactjs.com/",
+    url: "https://github.com/YosiSF/MilevaDB",
   },
   {
-    title: "Svelte",
+    title: "FIDel - Haskell",
     icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    url: "https://github.com/YosiSF/FIDel",
   },
   {
-    title: "Vue",
+    title: "VioletaBFT - Haskell",
     icon: "frameworks/vue",
-    url: "https://vuejs.org/",
+    url: "https://github.com/YosiSF/VioletaBFT",
   },
-  {
-    title: "Solid",
-    icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
-  },
-  {
-    title: "Lit",
-    icon: "frameworks/lit",
-    url: "https://lit.dev/",
-  },
+
 ];
 
 const platforms: Array<CompatibilityItem> = [
   {
-    title: "Netlify",
+    title: "K8s",
     icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
+    url: "https://www.einsteindb.com/",
   },
   {
-    title: "Vercel",
+    title: "FoundationDB",
     icon: "platforms/vercel",
     url: "https://vercel.com/",
   },
   {
-    title: "Cloudflare",
+    title: "Microsoft Azure",
     icon: "fa-brands:cloudflare",
     url: "https://pages.cloudflare.com/",
   },
-  {
-    title: "Render",
-    icon: "platforms/render",
-    url: "https://render.com/",
-  },
-  {
-    title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://pages.github.com/",
-  },
-  {
-    title: "GitLab",
-    icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
-  },
+
 ];
 ---
 
 <ContentSection title="Compatibility" id="compatibility">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
+    EinsteinDB <span class="text-primary">plays nice</span>. Bring your own UI{" "}
     <span class="text-primary">framework</span>
      and deploy to your favorite <span class="text-primary">platform</span>.
   </Fragment>
