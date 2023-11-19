@@ -1,5 +1,5 @@
 {
-  "title": "The Firebase Blog",
+  "title": "How EinsteinDB pushes the envelope for Rust-laden FoundationDB Record Layer implementation while keeping an attribute value entity in the database",
   "image": "/src/content/showcase/_images/firebase-blog.png",
   "url": "https://firebase.blog/",
   "featured": 5
