@@ -2,11 +2,14 @@
 import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import ShowcaseCard from "~/components/showcase-card.astro";
+const [featuredSites] = await Promise.all([getCollection(
+    'showcase',
 
-const featuredSites = await getCollection(
-  "showcase",
-  ({ data }) => "featured" in data,
-);
+    ({data}) => {
+      return "featured" in data;
+    },
+)]);
+
 const orderedSites = featuredSites.sort(
   (a, b) => a.data.featured! - b.data.featured!,
 );
@@ -15,8 +18,8 @@ const orderedSites = featuredSites.sort(
 <ContentSection title="Showcase" id="showcase">
   <Fragment slot="lead">
     EinsteinDB <span class="text-primary">Is Built for Write-Optimized and Repeatable Read Workloads.</span>.{" "}
-    <span class="text-primary">Explore</span> Plug-And-Play{" "}
-    <span class="text-primary">inspired</span>.
+    <span class="text-primary">Explore our Newest Enhanced-Large-Language Model Retriever using Xpander Graphs and Wolfram's Hypercauset data structure bringing to light</span> Plug-And-Play Conic Structures for Today's Autoregressive Generational AI problems in Database Management{" "}
+    <span class="text-primary">"EinsteinDB is novel and forward-thinking as it encompasses the advances of the past 15 years in high-throughput computing with a semantic prolog-driven key-value architecture which resembles classic platforms like Galileo" Andy Pavlo -- Carnegie Mellon </span>.
   </Fragment>
   <div class="max-w-6xl space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
