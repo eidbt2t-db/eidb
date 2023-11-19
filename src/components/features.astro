@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
 
@@ -43,24 +44,32 @@ const features: Array<FeatureItem> = [
 ];
 ---
 
+
 <ContentSection title="Features" id="features">
   <Fragment slot="lead">
-    EinsteinDB deploys with <span class="text-primary">K8s, Docker Swarm, Mesos, Ansible, EKS </span>, Rancher
-    for Continuous Integration and Continuous Deployment with GKE, and OpenShift Container Platform with Red Hat and Oracle.
-    <span class="text-primary">state-of-the-art</span>
-    <span class="text-primary">innovations</span>.
+   EinsteinDB is a relativistic causal consistent write-optimized row-switching retrieval-enhanced semantic knowledge and Hybrid HTAP <span class="text-primary">backed by Interplanetary File System and Local Storage by Apple Inc's FoundationDB</span>.
+    A Supercolumnar database for Query Optimization and the <span class="text-primary"> advent of GPT4 powered Natural Language <span class="text-primary"> to Any of 19 SQL variants including TransactSQL, SQLite, Postgres, MariaDB, and InnoDB </span>
+
+    <span class="text-primary">A Universal Continuum Database with Imagination Augmented Planners and Schema Free tuplestore event-driven persistence. </span>
+    tools and adds its own <span class="text-primary">innovations</span>
+
   </Fragment>
+
+
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
-          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
-            <Icon name={icon} />
-          </div>
-          <p class="text-center font-extrabold text-xl">{title}</p>
-          <p class="text-center text-offset text-sm">{description}</p>
-        </li>
+          <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+            <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+              <Icon name={icon} />
+            </div>
+            <p class="text-center font-extrabold text-xl">{title}</p>
+            <p class="text-center text-offset text-sm">{description}</p>
+          </li>
+
+
       ))
-    }
-  </ul>
-</ContentSection>
+      }
+      </ul>
+      </ContentSection>
+
