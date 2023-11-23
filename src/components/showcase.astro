@@ -2,12 +2,11 @@
 import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import ShowcaseCard from "~/components/showcase-card.astro";
-
-// Assuming `AnyEntryMap` is the type for your collection entries
 const [featuredSites] = await Promise.all([getCollection(
     'showcase',
-    (entry) => {
-      return "featured" in entry.data;
+
+    ({data}) => {
+      return "featured" in data;
     },
 )]);
 
