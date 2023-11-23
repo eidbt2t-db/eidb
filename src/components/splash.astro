@@ -1,4 +1,6 @@
 ---
+import Starfield from "./starfield.astro";
+---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import astronautImage from "~/assets/astronaut.png";
@@ -8,43 +10,36 @@ import GitHubCorner from "./github-corner.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
----
 
-<section class="relative h-full bg-black">
+export default function HomePage() {
+    return (
+<section className="relative h-full bg-black">
   <Starfield />
   <GitHubCorner />
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+  <div id="splash-bg-fallback" className="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative grid h-full place-items-center sm:grid-cols-2">
-    <h2
-      class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
-      <div
-        class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
-      >
+  <div className="relative grid h-full place-items-center sm:grid-cols-2">
+    <div className="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end">
+      <Icon name="logomark" className="h-24 text-white md:h-32" />
+      <div className="gradient-text text-center font-extrabold tracking-tighter text-8xl">
         Relativistic Batch Processing with Causal Consistent Read Isolation in either lock-free or interlocking directorates.
         <br /> Hybrid OLAP/OLTP
-        <br />  No-Code AI4DB
+        <br /> No-Code AI4DB
       </div>
-    </h2>
-    <div
-      id="astronaut"
-      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
-    >
+    </div>
+    <div id="astronaut" className="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start">
       <Image
-        class="h-full w-full object-cover"
-        src={astronautImage}
-        widths={widths}
-        sizes={sizes}
-        loading="eager"
-        alt="A floating astronaut in a space suit"
+          className="h-full w-full object-cover"
+          src={astronautImage}
+          widths={widths}
+          sizes={sizes}
+          loading="eager"
+          alt="A floating astronaut in a space suit"
       />
     </div>
   </div>
 </section>
-
 <noscript>
   <style>
     #splash-bg-fallback {
@@ -52,7 +47,6 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     }
   </style>
 </noscript>
-
 <style>
   @keyframes float {
     0% {
@@ -82,3 +76,5 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     }
   }
 </style>
+    );
+    }
